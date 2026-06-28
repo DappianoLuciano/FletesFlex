@@ -116,8 +116,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Lo que hacemos</span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-accent mt-3 mb-4">
+          <span className="gold-metallic font-bold text-sm uppercase tracking-wider">Lo que hacemos</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mt-3 mb-4">
             Nuestros Servicios
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -135,7 +135,7 @@ export default function Services() {
                   {services[currentIndex].icon}
                 </div>
 
-                <h3 className="text-xl font-bold text-accent mb-3 text-center">
+                <h3 className="text-xl font-bold text-black mb-3 text-center">
                   {services[currentIndex].title}
                 </h3>
 
@@ -224,7 +224,7 @@ export default function Services() {
                   {service.icon}
                 </div>
 
-                <h3 className="text-xl font-bold text-accent mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:gold-metallic transition-colors">
                   {service.title}
                 </h3>
 

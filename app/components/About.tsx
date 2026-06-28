@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <section id="nosotros" className="py-12 bg-white">
+    <section id="nosotros" className="py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Image/Visual */}
@@ -59,16 +59,16 @@ export default function About() {
           {/* Right Column - Content */}
           <div className="space-y-6">
             <div>
-              <span className="text-primary font-bold text-sm uppercase tracking-wider">Sobre Nosotros</span>
-              <h2 className="text-4xl sm:text-5xl font-bold text-accent mt-3 mb-6">
-                Tu aliado en <span className="text-primary">logística</span>
+              <span className="gold-metallic font-bold text-sm uppercase tracking-wider">Sobre Nosotros</span>
+              <h2 className="text-4xl sm:text-5xl font-bold text-black mt-3 mb-6">
+                Tu aliado en <span className="gold-metallic">logística</span>
               </h2>
             </div>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              En <span className="font-bold text-accent">FletesFlex</span> somos especialistas en fletes y mudanzas
+              En <span className="font-bold text-black">FletesFlex</span> somos especialistas en fletes y mudanzas
               en Quilmes, CABA y Gran Buenos Aires. Con años de experiencia en el sector, nos
-              destacamos por nuestra <span className="font-semibold text-primary">flexibilidad, puntualidad y profesionalismo</span>.
+              destacamos por nuestra <span className="font-semibold gold-metallic">flexibilidad, puntualidad y profesionalismo</span>.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -94,7 +94,7 @@ export default function About() {
             <div className="pt-6 text-center">
               <a
                 href="#contacto"
-                className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-[#e89610] transition-all transform hover:scale-105"
+                className="inline-block gold-metallic-bg text-black px-8 py-4 rounded-full font-bold hover:brightness-110 transition-all transform hover:scale-105"
               >
                 Conocé Más
               </a>

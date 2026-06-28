@@ -53,8 +53,8 @@ export default function Gallery() {
     <section id="galeria" className="py-12 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <span className="text-primary font-bold text-sm uppercase tracking-wider">Nuestro Trabajo</span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-accent mt-3 mb-4">
+          <span className="gold-metallic font-bold text-sm uppercase tracking-wider">Nuestro Trabajo</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mt-3 mb-4">
             Galería de Servicios
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export default function Gallery() {
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full font-semibold transition-all ${
                 filter === cat
-                  ? 'bg-primary text-white shadow-lg scale-105'
+                  ? 'gold-metallic-bg text-black shadow-lg scale-105'
                   : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
               }`}
             >

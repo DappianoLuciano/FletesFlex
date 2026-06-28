@@ -10,7 +10,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      // Detectar cuando pasa del hero (aproximadamente altura de viewport)
+      setIsScrolled(window.scrollY > window.innerHeight - 100);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -18,17 +19,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-accent/95 backdrop-blur-md shadow-lg py-3'
-          : 'bg-accent py-5'
+          ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-primary/20 py-3'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-32 h-14">
+            <div className="relative w-40 h-16 sm:w-48 sm:h-20">
               <Image
                 src="/img/logo2.png"
                 alt="FletesFlex Logo"
@@ -61,7 +62,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="#contacto"
-              className="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-[#e89610] transition-all transform hover:scale-105"
+              className="gold-metallic-bg text-black px-6 py-3 rounded-full font-bold hover:brightness-110 transition-all transform hover:scale-105"
             >
               Contactar
             </Link>
@@ -113,7 +114,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="#contacto"
-                className="bg-primary text-white px-6 py-3 rounded-full font-bold text-center hover:bg-[#e89610] transition-all"
+                className="gold-metallic-bg text-black px-6 py-3 rounded-full font-bold text-center hover:brightness-110 transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contactar
