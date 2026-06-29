@@ -4,17 +4,22 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 const galleryImages = [
-  { id: 1, category: 'trabajos', image: '/img/trabajos1.webp' },
-  { id: 2, category: 'trabajos', image: '/img/trabajos2.webp' },
-  { id: 3, category: 'trabajos', image: '/img/trabajos3.webp' },
-  { id: 4, category: 'trabajos', image: '/img/trabajos4.webp' },
-  { id: 5, category: 'trabajos', image: '/img/trabajos5.webp' },
-  { id: 6, category: 'trabajos', image: '/img/trabajos6.webp' },
-  { id: 7, category: 'vehiculos', image: '/img/vehiculo 1.webp' },
-  { id: 8, category: 'vehiculos', image: '/img/vehiculo2.webp' },
-  { id: 9, category: 'vehiculos', image: '/img/vehiculo3.webp' },
-  { id: 10, category: 'vehiculos', image: '/img/vehiculo4.webp' },
-  { id: 11, category: 'vehiculos', image: '/img/vehiculo5.webp' },
+  { id: 1, category: 'trabajos', image: '/img/trabajo7.jpg' },
+  { id: 2, category: 'trabajos', image: '/img/trabajo8.jpg' },
+  { id: 3, category: 'trabajos', image: '/img/trabajo9.jpg' },
+  { id: 4, category: 'trabajos', image: '/img/trabajo10.jpg' },
+  { id: 5, category: 'trabajos', image: '/img/trabajo11.jpg' },
+  { id: 6, category: 'trabajos', image: '/img/trabajos1.webp' },
+  { id: 7, category: 'trabajos', image: '/img/trabajos2.webp' },
+  { id: 8, category: 'trabajos', image: '/img/trabajos3.webp' },
+  { id: 9, category: 'trabajos', image: '/img/trabajos4.webp' },
+  { id: 10, category: 'trabajos', image: '/img/trabajos5.webp' },
+  { id: 11, category: 'trabajos', image: '/img/trabajos6.webp' },
+  { id: 12, category: 'vehiculos', image: '/img/vehiculo 1.webp' },
+  { id: 13, category: 'vehiculos', image: '/img/vehiculo2.webp' },
+  { id: 14, category: 'vehiculos', image: '/img/vehiculo3.webp' },
+  { id: 15, category: 'vehiculos', image: '/img/vehiculo4.webp' },
+  { id: 16, category: 'vehiculos', image: '/img/vehiculo5.webp' },
 ];
 
 export default function Gallery() {

@@ -1,8 +1,34 @@
 'use client';
 
-import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 export default function About() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {
+              // Silenciar error si el navegador bloquea autoplay
+            });
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="nosotros" className="py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,19 +66,18 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Video */}
           <div className="relative flex justify-center">
             <div className="relative z-10 w-full max-w-md">
               <div className="bg-gradient-to-br from-secondary to-primary rounded-3xl p-1">
-                <div className="relative aspect-square rounded-3xl overflow-hidden">
-                  <Image
-                    src="/img/trabajos1.webp"
-                    alt="FletesFlex en acción"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 400px"
-                    quality={95}
-                    priority
+                <div className="relative rounded-3xl overflow-hidden" style={{ aspectRatio: '9/16' }}>
+                  <video
+                    ref={videoRef}
+                    src="/img/mudanza-video.mp4"
+                    controls
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
