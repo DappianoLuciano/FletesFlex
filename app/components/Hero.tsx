@@ -1,6 +1,59 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+function CountUpAnimation({ end, duration = 3500, suffix = '' }: { end: number; duration?: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+
+            const increment = end / (duration / 16);
+            const timer = setInterval(() => {
+              countRef.current += increment;
+              if (countRef.current >= end) {
+                setCount(end);
+                clearInterval(timer);
+              } else {
+                setCount(Math.floor(countRef.current));
+              }
+            }, 16);
+
+            return () => clearInterval(timer);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end, duration, hasAnimated]);
+
+  // Format number with k for thousands
+  const formatNumber = (num: number) => {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'k';
+    }
+    return num.toString();
+  };
+
+  return (
+    <div ref={elementRef} className="text-4xl sm:text-5xl font-bold gold-metallic">
+      {formatNumber(count)}{suffix}
+    </div>
+  );
+}
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -106,6 +159,22 @@ export default function Hero() {
             >
               Ver Servicios
             </a>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 max-w-2xl mx-auto pt-16">
+            <div className="text-center">
+              <CountUpAnimation end={9900} suffix="+" />
+              <p className="text-gray-300 text-sm sm:text-base mt-2 font-medium">
+                Clientes Satisfechos
+              </p>
+            </div>
+            <div className="text-center">
+              <CountUpAnimation end={100} suffix="%" />
+              <p className="text-gray-300 text-sm sm:text-base mt-2 font-medium">
+                Entregas Exitosas
+              </p>
+            </div>
           </div>
         </div>
       </div>

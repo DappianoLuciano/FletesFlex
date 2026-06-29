@@ -26,10 +26,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between md:justify-between items-center relative">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative w-40 h-16 sm:w-48 sm:h-20">
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 mx-auto md:mx-0">
+            <div className="relative w-44 h-14 sm:w-56 sm:h-18 lg:w-64 lg:h-20">
               <Image
                 src="/img/logo2.png"
                 alt="FletesFlex Logo"
@@ -37,6 +37,11 @@ export default function Navbar() {
                 className="object-contain"
                 priority
               />
+            </div>
+            <div className="h-9 sm:h-11 lg:h-12 w-px bg-primary/50"></div>
+            <div className="flex flex-col text-primary text-sm sm:text-base font-bold tracking-wide">
+              <span>FLETES &</span>
+              <span>MUDANZAS</span>
             </div>
           </Link>
 
