@@ -28,7 +28,7 @@ export default function Contact() {
     window.open(whatsappUrl, '_blank');
   };
   return (
-    <section id="contacto" className="py-12 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+    <section id="contacto" className="py-12 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden overflow-x-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{
@@ -66,7 +66,7 @@ export default function Contact() {
                   Respuesta inmediata
                 </p>
                 <a
-                  href="https://wa.me/5491151747499"
+                  href="https://wa.me/5491151747499?text=Hola%20FletesFlex!%20Necesito%20un%20presupuesto%20para%20un%20servicio.%20%C2%BFMe%20pueden%20ayudar%3F"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="gold-metallic text-sm font-semibold hover:brightness-110 transition-colors"
@@ -148,7 +148,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    ¿Qué necesitás transportar?
+                    ¿Qué trabajo necesitas?
                   </label>
                   <select
                     value={formData.servicio}

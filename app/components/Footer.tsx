@@ -102,11 +102,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+          <div className="text-center text-gray-400 text-sm">
             <p>&copy; 2026 FletesFlex. Todos los derechos reservados.</p>
-            <p className="mt-2 md:mt-0">
-              Diseñado con ❤️ para movilizar tu mundo
-            </p>
           </div>
         </div>
       </div>

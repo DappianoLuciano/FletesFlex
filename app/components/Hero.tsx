@@ -90,7 +90,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="https://wa.me/5491151747499"
+              href="https://wa.me/5491151747499?text=Hola%20FletesFlex!%20Quiero%20cotizar%20un%20servicio.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
               target="_blank"
               rel="noopener noreferrer"
               className="group gold-metallic-bg text-black px-8 py-4 rounded-full font-bold text-lg hover:brightness-110 transition-all transform hover:scale-105 flex items-center space-x-2 shadow-xl"
