@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   title: "FletesFlex - Fletes & Mudanzas en Quilmes, CABA y GBA",
   description: "Servicio profesional de fletes y mudanzas en Quilmes, CABA y GBA. Cargas generales con equipo profesional. Atención de 7 a 22 hs todos los días.",
   keywords: ["fletes", "mudanzas", "quilmes", "caba", "gba", "transporte", "logística"],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: "FletesFlex - Tu solución en logística",
     description: "Fletes & Mudanzas profesionales en Quilmes, CABA y GBA",
