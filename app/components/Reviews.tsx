@@ -176,7 +176,7 @@ export default function Reviews() {
         {/* Google Link */}
         <div className="text-center mt-12">
           <a
-            href="https://g.page/r/TU_LINK_DE_GOOGLE_AQUI/review"
+            href="https://maps.app.goo.gl/HJiMYEUkGqnetjHEA"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-gray-300 hover:text-primary transition-colors"
